@@ -1,1 +1,35 @@
-<p>header works!</p>
+<header class="header">
+    <a href="/" class="logo_link">
+        <img src="" alt="Logo" class="logo_img">
+    </a>
+    <div class="tablet_menu_btn" [ngClass] = "{'rotate': showTabletMenu}" (click)="showBurger()">
+        <img src="../../assets/Burger_icon.png" alt="tablet_btn" class="burger_icon">
+    </div>
+    <nav class="navigation">
+        <ul class="nav_list">
+            <li class="nav_element">Services</li>
+            <li class="nav_element">About</li>
+            <li class="nav_element">Careers</li>
+            <li class="nav_element">Our work</li>
+        </ul>
+    </nav>
+    <section class="language">
+        <select name="languages" id="lang">
+            <option value="English">EN</option>
+            <option value="Polish">PL</option>
+        </select>
+    </section>
+    <section class="find">
+        <div class="find_logo_wrapper">
+            <img src="" alt="f_logo" class="find_logo">
+        </div>
+    </section>
+    <div class="tablet_menu" [ngClass]= "{'show_Menu': showTabletMenu}">
+        <ul class="nav_list">
+            <li class="nav_element">Services</li>
+            <li class="nav_element">About</li>
+            <li class="nav_element">Careers</li>
+            <li class="nav_element">Our work</li>
+        </ul>
+    </div>
+</header>
