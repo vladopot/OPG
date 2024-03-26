@@ -1,6 +1,6 @@
 <main class="main">
-    <h1 class="tittle">For You</h1>
     <section class="for_you">
+        <h1 class="tittle">FOR YOU</h1>
         <a class="link" href="">
             <div (mouseenter)="isHoverOurWork = true" (mouseleave)="isHoverOurWork = false" class="btn_for_you">
                 <p [ngStyle]= "{'color': isHoverOurWork ? 'white' : 'grey'}" class="btn_titte">OUR WORK</p>
@@ -11,5 +11,49 @@
                 <p [ngStyle]= "{'color': isHoverHire ? 'white' : 'grey'}" class="btn_titte">HIRE DEVELOPERS</p>
             </div>
         </a>
+    </section>
+    <section class="what_you_get">
+        <h1 class="tittle">WHAT YOU GET</h1>
+        <div class="abilitys">
+            <div class="ability">
+                <p class="abi_tittle">Dedicated Team</p>
+                <p class="paragraph">Empower Your Business with Our Dedicated Team</p>
+                <div class="img_cont">
+                    <img class="aby_img" src="assets/team.jpg" alt="Team">
+                </div>
+            </div>
+            <div class="ability">
+                <p class="abi_tittle">Proactive developers</p>
+                <p class="paragraph">Unlock Success with Proactive Developers</p>
+                <div class="img_cont">
+                    <img class="aby_img" src="assets/Developers.png" alt="Team">
+                </div>
+            </div>
+            <div class="ability">
+                <p class="abi_tittle">Flexible contract</p>
+                <p class="paragraph">Agile Contracts: Tailored to Your Needs</p>
+                <div class="img_cont">
+                    <img class="aby_img" src="assets/contract.png" alt="Team">
+                </div>
+            </div>
+            <div class="ability">
+                <p class="abi_tittle">24/7 support</p>
+                <p class="paragraph">Round-the-Clock Assistance: Your Reliable Support Partner</p>
+                <div class="img_cont">
+                    <img class="aby_img" src="assets/support.webp" alt="Team">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="what_we_do">
+        <div class="ww_do_container">
+            <h1 class="tittle">WHAT WE DO</h1>
+            <div class="c">
+                <h3 class="ww_do">We are a team of professionals dedicated to creating impressive web applications and interfaces that capture attention and provide an unforgettable experience for users. At OPG, we specialize in front-end development - the part of the process that brings life, beauty, and functionality to your website.</h3>
+                <div class="img_wrap">
+                    <img class="wwd_img" src="" alt="Мотивирующая ебнина! Мы там должны стоять красивые и бла бла">
+                </div>
+            </div>
+        </div>
     </section>
 </main>

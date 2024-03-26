@@ -25,6 +25,11 @@
         .logo_link {
             position: relative;
             margin-right: 10%;
+            width: 50px;
+            .logo_img {
+                position: relative;
+                width: 100%;
+            }
         }
         .navigation {
             .nav_list {
@@ -104,6 +109,11 @@
             position: relative;
             margin-left: 10px;
             align-self: center;
+            width: 50px;
+            .logo_img {
+                position: relative;
+                width: 100%;
+            }
         }
         .tablet_menu_btn {
             position: relative;
@@ -159,10 +169,10 @@
                 }
             } 
         }
-        .navigation {
+        .language {
             display: none;
         }
-        .language {
+        .navigation {
             display: none;
         }
         .find {
