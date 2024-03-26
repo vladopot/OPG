@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+}
+
+@media only screen and (min-width: 600px) {
+    .footer {
+        position: relative;
+        height: 200px;
+        display: flex;
+        text-align: center;
+        gap: 10%;
+        background-color: rgb(180, 180, 180);
+        z-index: 0;
+        .container {
+            position: relative;
+            width: 250px;
+            margin-top: 30px;
+            margin-left: 10%;
+            .motivation {
+                position: relative;
+                text-align: left;
+            }
+            .addreses {
+                position: relative;
+                margin-top: 30px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .contacts {
+            position: relative;
+            display: flex;
+            top: calc(50% - 75px);
+            height: 150px;
+            width: 300px;
+            border-left: 0.3px solid grey;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 30px;
+            .webs {
+                position: relative;
+                display: flex;
+                justify-content: space-around;
+                gap: 10px;
+                .web {
+                    position: relative;
+                    width: 30px;
+                    .web_img {
+                        position: relative;
+                        width: 100%;
+                    }
+                }
+            }
+            .email_privasy_politics {
+                position: relative;
+                display: flex;
+                gap: 10px;
+                flex-direction: column;
+                .link {
+                    position: relative;
+                    color: rgb(84, 84, 84);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .footer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background-color: rgb(180, 180, 180);
+        z-index: 0;
+        .container {
+            position: relative;
+            margin: 15px auto 20px auto;
+            width: 250px;
+            .motivation {
+                position: relative;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .addreses {
+                position: relative;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+        .contacts {
+            position: relative;
+            display: flex;
+            margin: 0 auto 10px auto;
+            height: 150px;
+            width: 300px;
+            border-top: 0.3px solid grey;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 30px;
+            .webs {
+                position: relative;
+                display: flex;
+                justify-content: space-around;
+                gap: 10px;
+                .web {
+                    position: relative;
+                    width: 30px;
+                    .web_img {
+                        position: relative;
+                        width: 100%;
+                    }
+                }
+            }
+            .email_privasy_politics {
+                position: relative;
+                display: flex;
+                gap: 10px;
+                flex-direction: column;
+                .link {
+                    position: relative;
+                    color: rgb(84, 84, 84);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.link:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}

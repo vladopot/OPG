@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: 1s;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+}
+
+.main {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    .tittle {
+        position: relative;
+        text-align: center;
+    }
+    .for_you {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 15px;
+        .link {
+            position: relative;
+            text-decoration: none;
+            margin: auto;
+            .btn_for_you {
+                position: relative;
+                width: 150px;
+                height: 60px;
+                border: 0.5px solid rgb(110, 110, 110);
+                border-radius: 3px;
+                .btn_titte {
+                    position: relative;
+                    text-align: center;
+                    top: calc(50% - 9px);
+                    color: rgb(110, 110, 110);
+                }
+            }
+        }
+    }
+}
+
+.btn_for_you:hover {
+    cursor: pointer;
+    background-color: rgb(110, 110, 110);
+}
+
+.hover {
+    color: white;
+}

@@ -9,9 +9,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  showTabletMenu: boolean = true;
+  showTabletMenu: boolean = false;
+  hideField: boolean = true;
 
   showBurger() {
     this.showTabletMenu = !this.showTabletMenu;
+  }
+
+  showHideField() {
+    this.hideField = !this.hideField;
   }
 }

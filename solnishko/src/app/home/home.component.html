@@ -1,1 +1,15 @@
-<p>home works!</p>
+<main class="main">
+    <h1 class="tittle">For You</h1>
+    <section class="for_you">
+        <a class="link" href="">
+            <div (mouseenter)="isHoverOurWork = true" (mouseleave)="isHoverOurWork = false" class="btn_for_you">
+                <p [ngStyle]= "{'color': isHoverOurWork ? 'white' : 'grey'}" class="btn_titte">OUR WORK</p>
+            </div>
+        </a>
+        <a class="link" href="">
+            <div (mouseenter)="isHoverHire = true" (mouseleave)="isHoverHire = false" class="btn_for_you">
+                <p [ngStyle]= "{'color': isHoverHire ? 'white' : 'grey'}" class="btn_titte">HIRE DEVELOPERS</p>
+            </div>
+        </a>
+    </section>
+</main>
