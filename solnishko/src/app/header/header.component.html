@@ -1,45 +1,46 @@
 <header class="header">
-    <div href="/" class="logo_link">
-        <img src="assets/LOGO.png" alt="Logo" class="logo_img">
+    <div class="logo_link">
+        <p class="logo_img">DEVMARA</p>
     </div>
     <div class="tablet_menu_btn" [ngClass] = "{'rotate': showTabletMenu}" (click)="showBurger()">
         <img src="assets/Burger_icon.png" alt="tablet_btn" class="burger_icon">
     </div>
     <nav class="navigation">
         <ul class="nav_list">
-            <li class="nav_element">Services</li>
-            <li class="nav_element">About</li>
-            <li class="nav_element">Careers</li>
-            <li class="nav_element">Our work</li>
+            <li class="nav_element">
+                <div class="nav_tittle_container">
+                    <span class="nav_tittle">What we do </span>
+                    <div class="img_container">
+                        <img class="arr_img" src="./assets/arr.png" alt="arr">
+                    </div>
+                </div>
+                <div class="drop_container">
+                    <div class="mirr"></div>
+                    <div class="menu_containers">
+                        <div class="containers">
+                            <div class="services_container">
+                                <span class="servises_tittle">Services</span>
+                                <div class="servisec_list">
+                                    <span class="servise_name pointer">Web Dev</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav_element pointer">Portfolio</li>
+            <li class="nav_element pointer">Insights</li>
+            <li class="nav_element pointer">About us</li>
+            <li class="nav_element contact_us">Contact us</li>
         </ul>
     </nav>
-    <section class="language">
-        <select class="lang" name="languages" id="lang">
-            <option value="English">EN</option>
-            <option value="Polish">PL</option>
-        </select>
-    </section>
-    <section class="find">
-        <button class="sub_btn" (click)="showHideField()" type="button">
-            <img class="find_logo" src="assets/find.jpg" alt="f_logo">
-        </button>
-    </section>
     <section class="tablet_menu" [ngClass]= "{'show_Menu': showTabletMenu}">
         <ul class="nav_list">
-            <li class="nav_element">Services</li>
-            <li class="nav_element">About</li>
-            <li class="nav_element">Careers</li>
-            <li class="nav_element">Our work</li>
+            <li class="nav_element">What we do</li>
+            <li class="nav_element">Portfolio</li>
+            <li class="nav_element">Insights</li>
+            <li class="nav_element">About us</li>
+            <li class="nav_element contact_us">Contact us</li>
         </ul>
-        <form class="search_form" action="">
-            <input class="search_input" type="text">
-            <button class="button_srch">Search</button>
-        </form>
     </section>
 </header>
-<section class="search_section" [ngClass] = "{hidden : hideField, visible : !hideField}">
-    <form class="search_form" action="">
-        <input class="search_input" type="text">
-        <button class="button_srch">Search</button>
-    </form>
-</section>
