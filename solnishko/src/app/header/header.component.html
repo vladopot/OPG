@@ -21,7 +21,9 @@
                             <div class="services_container">
                                 <span class="servises_tittle">Services</span>
                                 <div class="servisec_list">
-                                    <span class="servise_name pointer">Web Dev</span>
+                                    <span class="servise_name pointer">Web development</span>
+                                    <span class="servise_name pointer">Mobile app development</span>
+                                    <span class="servise_name pointer">Software development for startups</span>
                                 </div>
                             </div>
                         </div>
@@ -36,11 +38,48 @@
     </nav>
     <section class="tablet_menu" [ngClass]= "{'show_Menu': showTabletMenu}">
         <ul class="nav_list">
-            <li class="nav_element">What we do</li>
-            <li class="nav_element">Portfolio</li>
-            <li class="nav_element">Insights</li>
-            <li class="nav_element">About us</li>
-            <li class="nav_element contact_us">Contact us</li>
+            <li class="nav_element">
+                <div class="nav_tittle_container">
+                    <span class="nav_tittle">What we do </span>
+                    <div class="img_container">
+                        <img class="arr_img" src="./assets/arr.png" alt="arr">
+                    </div>
+                </div>
+                <div class="drop_container">
+                    <div class="menu_containers">
+                        <div class="containers">
+                            <div class="container">
+                                <span class="nav_tittle">Services</span>
+                                <div class="servisec_list">
+                                    <span class="servise_name pointer">Web development</span>
+                                    <span class="servise_name pointer">Mobile app development</span>
+                                    <span class="servise_name pointer">Software development for startups</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav_element">
+                <div class="nav_tittle_container">
+                    <span class="nav_tittle">Portfolio </span>
+                </div>
+            </li>
+            <li class="nav_element">
+                <div class="nav_tittle_container">
+                    <span class="nav_tittle">Insights </span>
+                </div>
+            </li>
+            <li class="nav_element">
+                <div class="nav_tittle_container">
+                    <span class="nav_tittle">About us </span>
+                </div>
+            </li>
+            <li class="nav_element contact_us">
+                <div class="nav_tittle_container">
+                    <span class="nav_tittle">Contact us </span>
+                </div>
+            </li>
         </ul>
     </section>
 </header>
