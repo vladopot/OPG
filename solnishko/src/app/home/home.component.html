@@ -1,7 +1,73 @@
 <main class="main">
-    <section class="what_you_get">
-        <div class="abilitys">
-            
+    <section class="advantages">
+      <div class="advantages_wrapper">
+        <div [ngClass]="getClasses()" class="advantages_cont advantages_tittle">
+          <h1 class="tittle_620px">{{ advantages[position].name }}</h1>
         </div>
+        <div class="advantages_cont advantages_control_panel">
+          <div [ngClass]="{'active': advantages[0].active, 'non_active': !advantages[0].active}" class="control_btn_620px" (click)="changeCard($event)">01</div>
+          <div [ngClass]="{'active': advantages[1].active, 'non_active': !advantages[1].active}" class="control_btn_620px" (click)="changeCard($event)">02</div>
+          <div [ngClass]="{'active': advantages[2].active, 'non_active': !advantages[2].active}" class="control_btn_620px" (click)="changeCard($event)">03</div>
+          <div [ngClass]="{'active': advantages[3].active, 'non_active': !advantages[3].active}" class="control_btn_620px" (click)="changeCard($event)">04</div>
+          <p class="article_320px">{{ advantages[position].text }}</p>
+          <h1 class="tittle_320px">{{ advantages[position].name }}</h1>
+        </div>
+        <div class="advantages_cont article_wrapper" [ngClass]="{'hidden': !advantages[position].active, 'visible': advantages[position].active}">
+          <p class="article_620px">{{ advantages[position].text }}</p>
+            <button [ngClass]="getClasses()" class="article_button_620px">
+                {{ advantages[position].link_text }}
+            </button>
+        </div>
+        <div [ngClass]="{'hidden': !advantages[position].active, 'visible': advantages[position].active}" class="advantages_cont advantages_img">
+          <img class="advantage_img" [src]="advantages[position].link" [alt]="advantages[position].name">
+          <div class="control_panel_320px">
+            <div [ngClass]="{'active': advantages[0].active, 'non_active': !advantages[0].active}" class="control_btn_320px" (click)="changeCard($event)">01</div>
+            <div [ngClass]="{'active': advantages[1].active, 'non_active': !advantages[1].active}" class="control_btn_320px" (click)="changeCard($event)">02</div>
+            <div [ngClass]="{'active': advantages[2].active, 'non_active': !advantages[2].active}" class="control_btn_320px" (click)="changeCard($event)">03</div>
+            <div [ngClass]="{'active': advantages[3].active, 'non_active': !advantages[3].active}" class="control_btn_320px" (click)="changeCard($event)">04</div>
+          </div>
+          <button [ngClass]="getClasses()" class="article_button_320px">
+            {{ advantages[position].link_text }}
+          </button>
+        </div>
+      </div>
     </section>
-</main>
+    <section class="about_us_sect">
+        <div class="text_ab_us">
+            <h3 class="ab_us_tittle">With a wealth of experience in delivering bespoke web development solutions to global enterprises, successful startups, and tech-driven companies worldwide, our team excels in efficiency and expertise. We specialize in crafting innovative web applications that meet unique client needs, ensuring transformative outcomes and lasting partnerships.</h3>
+            <h4 class="ab_us_tittle_2">Devmara's customers benefit from many advantages as a result of our cooperation.</h4>
+          </div>
+    </section>
+    <section class="key_stats_section">
+      <div class="key_stats_container">
+        <div class="stat_container box1">
+          <h3 class="stats_tittle">Key Stats</h3>
+        </div>
+        <div class="stat_container">
+          <h3 class="stat_tittle">500+</h3>
+          <p class="stat_text">award-winning clients</p>
+        </div>
+        <div class="stat_container">
+          <h3 class="stat_tittle">£12B+</h3>
+          <p class="stat_text">in client acquisitions</p>
+        </div>
+        <div class="stat_container">
+          <h3 class="stat_tittle">36</h3>
+          <p class="stat_text">month average engagement</p>
+        </div>
+        <div class="stat_container">
+          <h3 class="stat_tittle">20+</h3>
+          <p class="stat_text">client IPOs supported</p>
+        </div>
+        <div class="stat_container">
+          <h3 class="stat_tittle">20+</h3>
+          <p class="stat_text">years of experience</p>
+        </div>
+        <div class="stat_container">
+          <h3 class="stat_tittle">3k+</h3>
+          <p class="stat_text">world-class engineers</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
