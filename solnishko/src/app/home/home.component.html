@@ -14,12 +14,12 @@
         </div>
         <div class="advantages_cont article_wrapper" [ngClass]="{'hidden': !advantages[position].active, 'visible': advantages[position].active}">
           <p class="article_620px">{{ advantages[position].text }}</p>
-            <button [ngClass]="getClasses()" class="article_button_620px">
-                {{ advantages[position].link_text }}
-            </button>
+          <button [ngClass]="getClasses()" class="article_button_620px">
+              {{ advantages[position].link_text }}
+          </button>
         </div>
         <div [ngClass]="{'hidden': !advantages[position].active, 'visible': advantages[position].active}" class="advantages_cont advantages_img">
-          <img class="advantage_img" [src]="advantages[position].link" [alt]="advantages[position].name">
+          <img appSwipe (swipeLeft)="changeCardSwipe(position+1)" (swipeRight)="changeCardSwipe(position-1)" class="advantage_img" [src]="advantages[position].link" [alt]="advantages[position].name">
           <div class="control_panel_320px">
             <div [ngClass]="{'active': advantages[0].active, 'non_active': !advantages[0].active}" class="control_btn_320px" (click)="changeCard($event)">01</div>
             <div [ngClass]="{'active': advantages[1].active, 'non_active': !advantages[1].active}" class="control_btn_320px" (click)="changeCard($event)">02</div>

@@ -1,20 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { advantages_array } from './texts';
+import { SwipeDirective } from '../directives/swipe.directive';
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    SwipeDirective
+  ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrls: ['./home.component.scss'],
 })
-
 export class HomeComponent {
   public advantages = advantages_array;
   public position = 0;
   private isChanging = false;
 
-  constructor() { }
+  constructor() {}
 
   changeCard(event: MouseEvent) {
     if (!this.isChanging) {
@@ -32,16 +36,17 @@ export class HomeComponent {
     }
   }
 
-  // changeCardFurther() {
-  //   const currentAdvantage = this.advantages[this.position];
-  //   if (currentAdvantage) {
-  //     currentAdvantage.active = false;
-  //     setTimeout(() => {
-  //       this.position = (this.position < this.advantages.length - 1) ? this.position + 1 : 0;
-  //       this.advantages[this.position].active = true;
-  //     }, 500);
-  //   }
-  // }
+  changeCardSwipe(page: number) {
+    if (page < 0 || page >= this.advantages.length) {
+      return;
+    }
+    const currentAdvantage = this.advantages[this.position];
+    if (currentAdvantage) {
+      currentAdvantage.active = false;
+      this.position = page;
+      this.advantages[this.position].active = true;
+    }
+  }
 
   getClasses() {
     return [...this.advantages[this.position].classes, this.advantages[this.position].active ? 'visible' : 'hidden'];
