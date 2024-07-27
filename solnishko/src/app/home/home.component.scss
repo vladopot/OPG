@@ -86,13 +86,16 @@
                 }
             }
         }
+        .about_us_sect {
+            position: relative;
+            margin: 0px;
+        }
         .key_stats_section {
             position: relative;
             display: flex;
             justify-content: end;
             .key_stats_container {
                 width: 80%;
-
                 border-top: 0.01px solid rgb(200, 200, 200);
                 border-left: 0.01px solid rgb(200, 200, 200);
                 display: grid;
@@ -242,7 +245,6 @@
     .about_us_sect {
         position: relative;
         display: flex;
-        margin-top: 20px;
         justify-content: flex-end;
         .text_ab_us {
             position: relative;

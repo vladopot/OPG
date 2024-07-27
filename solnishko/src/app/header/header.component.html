@@ -1,5 +1,5 @@
 <header class="header">
-    <div class="logo_link">
+    <div class="logo_link" (click)="goHome()">
         <p class="logo_img">DEVMARA</p>
     </div>
     <div class="tablet_menu_btn" [ngClass] = "{'rotate': showTabletMenu}" (click)="showBurger()">
@@ -21,7 +21,7 @@
                             <div class="services_container">
                                 <span class="servises_tittle">Services</span>
                                 <div class="servisec_list">
-                                    <span class="servise_name pointer">Web development</span>
+                                    <a class="servise_name pointer" (click)="goToWeb()">Web development</a>
                                     <span class="servise_name pointer">Mobile app development</span>
                                     <span class="servise_name pointer">Software development for startups</span>
                                 </div>
