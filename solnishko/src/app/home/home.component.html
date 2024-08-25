@@ -1,6 +1,33 @@
 <main class="main">
     <section class="advantages">
       <div class="advantages_wrapper">
+        <div class="advantages_text_container">
+          <h1 class="advantages_tittle">{{ advantages[position].name }}</h1>
+          <p class="advantages_text">{{ advantages[position].text }}</p>
+        </div>
+        <div class="control_panel">
+          <div class="control_button" [ngClass]="{'active': advantages[0].active, 'non_active': !advantages[0].active}" (click)="changeCard($event)">01</div>
+          <div class="control_button" [ngClass]="{'active': advantages[1].active, 'non_active': !advantages[1].active}" (click)="changeCard($event)">02</div>
+          <div class="control_button" [ngClass]="{'active': advantages[2].active, 'non_active': !advantages[2].active}" (click)="changeCard($event)">03</div>
+          <div class="control_button" [ngClass]="{'active': advantages[3].active, 'non_active': !advantages[3].active}" (click)="changeCard($event)">04</div>
+        </div>
+        <div class="image_container">
+          <img appSwipe (swipeLeft)="changeCardSwipe(position+1)" (swipeRight)="changeCardSwipe(position-1)" class="advantage_img" src="{{ advantages[position].link }}" alt="">
+          <button [ngClass]="getClasses()" class="article_button">
+            <div class="arrow"></div>
+            {{ advantages[position].link_text }}
+          </button>
+          <div class="control_btns">
+            <div class="left_btn" (click)="changeCardSwipe(this.position-1)">
+              <div class="left_img"></div>
+            </div>
+            <div class="right_btn" (click)="changeCardSwipe(this.position+1)">
+              <div class="right_img"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="advantages_wrapper">
         <div [ngClass]="getClasses()" class="advantages_cont advantages_tittle">
           <h1 class="tittle_620px">{{ advantages[position].name }}</h1>
         </div>
@@ -30,7 +57,7 @@
             {{ advantages[position].link_text }}
           </button>
         </div>
-      </div>
+      </div> -->
     </section>
     <section class="about_us_sect">
         <div class="text_ab_us">

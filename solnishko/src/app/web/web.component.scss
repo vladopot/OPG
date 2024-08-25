@@ -4,9 +4,49 @@ $text_font_weight: 300;
 .web_app_serv_tittles {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 4fr 1fr;
+    background-color: #EBEBED;
     .empty_block {
         border-right: 0.01px solid rgb(200, 200, 200);
+    }
+    .get_in_touch_button {
+        display: flex;
+        border-right: 0.01px solid rgb(200, 200, 200);
+        height: 100%;
+        background-color: rgb(43, 255, 43);
+        .btn_text {
+            margin-top: 40px;
+            margin-left: 30px;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+        .img_wrapper {
+            position: relative;
+            width: 30px;
+            margin-top: 40px;
+            .get_in_touch_arr {
+                position: relative;
+                margin-top: 5px;
+                width: 20px;
+                height: 20px;
+                rotate: 45deg;
+                border-top: 3px solid black;
+                border-right: 3px solid black;
+            }
+        }
+    }
+    .get_in_touch_button:hover {
+        cursor: pointer;
+        background-color: rgb(100, 0, 131);
+        .btn_text {
+            color: white;
+        }
+        .img_wrapper {
+            .get_in_touch_arr {
+                border-top: 3px solid rgb(255, 255, 255);
+                border-right: 3px solid rgb(255, 255, 255);
+            }
+        }
     }
     .text_tittle {
       .tittle {
@@ -17,38 +57,33 @@ $text_font_weight: 300;
       }
       .text {
         font-weight: $text_font_weight;
-        margin-left: 50%;
+        margin-left: 30%;
         margin-top: 40px;
         margin-bottom: 30px;
         font-size: 20px;
-        max-width: 400px;
+        max-width: 800px;
+      }
+      @media only screen and (max-width: 700px) {
+        .text {
+            font-weight: $text_font_weight;
+            margin-left: 10%;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            font-size: 20px;
+            max-width: 400px;
+        }
+        .tittle {
+            font-weight: $tittle_font_weight;
+            font-size: 30px;
+            margin-left: 20px;
+            margin-top: 50px;
+          }
       }
     }
 }
 .get_in_touch {
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    .get_in_touch_button {
-        display: flex;
-        border-right: 0.01px solid rgb(200, 200, 200);
-        height: 400px;
-        background-color: rgb(43, 255, 43);
-        .btn_text {
-            margin-top: 40px;
-            margin-left: 30px;
-        }
-        .img_wrapper {
-            position: relative;
-            width: 30px;
-            margin-left: 30%;
-            margin-top: 40px;
-            .get_in_touch_arr {
-                rotate: -90deg;
-                width: 100%;
-            }
-        }
-    }
+    background-color: #EBEBED;
     .noteBook_photo_wrapper {
         height: 400px;
         .noteBook_photo {
@@ -57,19 +92,16 @@ $text_font_weight: 300;
             object-fit: cover;
         }
     }
-    .get_in_touch_button:hover {
-        cursor: pointer;
-        background-color: rgb(100, 0, 131);
-    }
 }
 .web_services {
     position: relative;
+    background-color: #EBEBED;
     .services_tittle_wrapper {
         height: 100px;
         .serv_tittle {
             position: relative;
             margin-left: 100px;
-            margin-top: 30px;
+            padding: 30px;
             font-weight: $tittle_font_weight;
         }
     }
@@ -80,6 +112,7 @@ $text_font_weight: 300;
         .service {
             border-top: 0.005px solid rgb(200, 200, 200);
             border-left: 0.005px solid rgb(200, 200, 200);
+            padding-bottom: 10px;
             min-height: 150px;
             .service_tittle {
                 position: relative;
@@ -92,36 +125,11 @@ $text_font_weight: 300;
                 position: relative;
                 margin-left: 20px;
                 font-weight: $text_font_weight;
-            }
-        }
-    }
-}
-.conpetentions {
-    position: relative;
-    border-top: 0.005px solid rgb(200, 200, 200);
-    padding-bottom: 25px;
-    .competentions_tittle {
-        font-weight: 500;
-        text-align: center;
-        margin-bottom: 20px;
-        margin-top: 15px;
-    }
-    .competentions_list {
-        position: relative;
-        display: flex;
-        justify-content: space-around;
-        font-weight: $text_font_weight;
-        .competent {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            .comp_tittle {
-                font-weight: 400;
-            }
-            .comp_list {
-                .comp {
-                    position: relative;
-                    margin-bottom: 4px;
+                .services_link {
+                    border-bottom: 1px solid black;
+                }
+                .services_link:hover {
+                    cursor: pointer;
                 }
             }
         }

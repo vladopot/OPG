@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-web',
@@ -9,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class WebComponent {
 
+  router = inject(Router);
+
+  goTo(link: string) {
+    this.router.navigateByUrl(link);
+  }
 }

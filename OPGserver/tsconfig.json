@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",          // Генерируем ES модули
+    "target": "ESNext",          // Целевая версия ECMAScript
+    "moduleResolution": "node", // Как TypeScript ищет модули
+    "esModuleInterop": true,    // Разрешает импорт по умолчанию для CommonJS
+    "skipLibCheck": true,       // Пропуск проверки типов в библиотеках
+    "strict": true,             // Включает все строгие проверки типов
+    "outDir": "./dist",         // Каталог для скомпилированных файлов
+    "rootDir": "./src",         // Корневая директория исходных файлов
+    "sourceMap": true,          // Создаёт sourcemap файлы для отладки
+    "declaration": true,        // Создаёт .d.ts файлы для типов
+    "declarationMap": true,     // Создаёт sourcemap файлы для деклараций
+    "resolveJsonModule": true   // Разрешает импорт JSON файлов
+  },
+  "include": ["src/**/*"],       // Включает все файлы в папке src
+  "exclude": ["node_modules"]    // Исключает папку node_modules
+}

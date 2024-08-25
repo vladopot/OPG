@@ -1,0 +1,175 @@
+$logo_font_weight: 600;
+$text_font_weight: 500;
+
+* {
+    transition: 0.2s;
+}
+
+@media only screen and (min-width: 660px) {
+    .inTouchWrapp {
+        position: relative;
+        display: flex;
+        background-color: #EBEBED;
+        .textUsWrapp {
+            position: relative;
+            width: 30%;
+            padding-right: 20px;
+            .textUsText {
+                position: relative;
+                width: 200px;
+                margin-top: 20px;
+                margin-left: 20px;
+                font-weight: $text_font_weight;
+            }
+        }
+        .inTouchForm {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .textUs {
+                position: relative;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-weight: $text_font_weight;
+                font-size: 15px;
+                padding-left: 15px;
+            }
+            .inTouchInput {
+                background-color: #EBEBED;
+                width: 100%;
+                height: 40px;
+                border-top: 0.1px solid grey;
+                border-bottom: none;
+                border-left: none;
+                border-right: none;
+            }
+            .inTouchInput:focus {
+                outline: none;
+            }
+            .submitButton {
+                position: relative;
+                padding-left: 20px;
+                height: 50px;
+                background-color: #FF6A47;
+                border: none;
+                .submit_btnTextAndArr {
+                    display: flex;
+                    justify-content: space-between;
+                    height: 100%;
+                    .submit_btnText {
+                        position: relative;
+                        top: 15px;
+                        text-align: left;
+                        font-weight: $text_font_weight;
+                        font-size: 16px;
+                    }
+                    .submit_btnArr {
+                        position: relative;
+                        width: 20px;
+                        height: 20px;
+                        margin-top: 5px;
+                        margin-right: 5px;
+                        border-right: 2px solid black;
+                        border-top: 2px solid black;
+                    }
+                }
+            }
+            .submitButton:hover {
+                cursor: pointer;
+                color: white;
+                background-color: purple;
+                .submit_btnTextAndArr {
+                    .submit_btnArr {
+                        border-right: 2px solid rgb(255, 255, 255);
+                        border-top: 2px solid rgb(255, 255, 255);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 659px) {
+    .inTouchWrapp {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: #EBEBED;
+        .textUsWrapp {
+            position: relative;
+            padding-right: 20px;
+            .textUsText {
+                position: relative;
+                margin-top: 20px;
+                margin-left: 20px;
+                font-weight: $text_font_weight;
+            }
+        }
+        .inTouchForm {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .textUs {
+                position: relative;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 15px;
+                font-weight: $text_font_weight;
+                font-size: 15px;
+            }
+            .inTouchInput {
+                background-color: #EBEBED;
+                width: 100%;
+                height: 40px;
+                border-top: 0.1px solid grey;
+                border-bottom: none;
+                border-left: none;
+                border-right: none;
+            }
+            .inTouchInput:focus {
+                outline: none;
+            }
+            .submitButton {
+                position: relative;
+                padding-left: 20px;
+                height: 50px;
+                background-color: #FF6A47;
+                border: none;
+                .submit_btnTextAndArr {
+                    display: flex;
+                    justify-content: space-between;
+                    height: 100%;
+                    .submit_btnText {
+                        position: relative;
+                        top: 15px;
+                        text-align: left;
+                        font-weight: $text_font_weight;
+                        font-size: 16px;
+                    }
+                    .submit_btnArr {
+                        position: relative;
+                        width: 20px;
+                        height: 20px;
+                        margin-top: 5px;
+                        margin-right: 5px;
+                        border-right: 2px solid black;
+                        border-top: 2px solid black;
+                    }
+                }
+            }
+            .submitButton:hover {
+                cursor: pointer;
+                color: white;
+                background-color: purple;
+                .submit_btnTextAndArr {
+                    .submit_btnArr {
+                        border-right: 2px solid rgb(255, 255, 255);
+                        border-top: 2px solid rgb(255, 255, 255);
+                    }
+                }
+            }
+        }
+    }
+}

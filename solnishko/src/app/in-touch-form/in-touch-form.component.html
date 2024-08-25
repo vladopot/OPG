@@ -1,0 +1,18 @@
+<div class="inTouchWrapp">
+    <div class="textUsWrapp">
+        <h2 class="textUsText">If you have any questions, you can always contact us</h2>
+    </div>
+    <form class="inTouchForm" [formGroup]="getInTouchForm" (ngSubmit)="submit()">
+        <h2 class="textUs">Text us</h2>
+        <label for="name_input"><input class="inTouchInput" type="text" id="name_input" formControlName = "name" placeholder="   your name *"></label>
+        <label for="mail_input"><input class="inTouchInput" type="email" id="mail_input" formControlName = "email" placeholder="   your email *"></label>
+        <label for="tel_input"><input class="inTouchInput" type="tel" id="tel_input" formControlName = "tel" placeholder="   your telephone"></label>
+        <label for="comments"><input class="inTouchInput" type="text" id="comments" formControlName = "textToUs" placeholder="   what do you want to ask?"></label>
+        <button class="submitButton" type="submit">
+            <div class="submit_btnTextAndArr">
+                <p class="submit_btnText">Submit</p>
+                <div class="submit_btnArr"></div>
+            </div>
+        </button>
+    </form>
+</div>

@@ -1,17 +1,16 @@
 <div class="web_app_serv_tittles">
-    <div class="empty_block"></div>
     <div class="text_tittle">
         <h2 class="tittle">Web app development services</h2>
         <p class="text">Enough with conventional solutions. Vention software developers have a sophisticated and nuanced understanding of how a grade-A web application can transform a business’s operations, profitability, and scale.</p>
     </div>
-</div>
-<div class="get_in_touch">
-    <div class="get_in_touch_button">
+    <div (click)="goTo('getIntouch')" class="get_in_touch_button">
         <h2 class="btn_text">GET IN TOUCH</h2>
         <div class="img_wrapper">
-            <img class="get_in_touch_arr" src="./../../assets/arr.png" alt="Get_in_touch">
+            <div class="get_in_touch_arr"></div>
         </div>
     </div>
+</div>
+<div class="get_in_touch">
     <div class="noteBook_photo_wrapper">
         <img class="noteBook_photo" src="./assets/noteBook.jpg" alt="NoteBook">
     </div>
@@ -23,11 +22,11 @@
     <div class="servisec_wrapper">
         <div class="service">
             <p class="service_tittle">UI/UX design</p>
-            <p class="service_text">Our dedicated UI/UX professionals create visually compelling web app experiences that are streamlined and engaging so they attract and retain users.</p>
+            <p class="service_text">Our dedicated <a class="services_link" (click)="goTo('ui-ux')">UI/UX professionals</a> create visually compelling web app experiences that are streamlined and engaging so they attract and retain users.</p>
         </div>
         <div class="service">
             <p class="service_tittle">Frontend development</p>
-            <p class="service_text">Working in tandem with UI/UX teams, our devs rely on both mainstream and specialised technologies to ensure that your app’s frontend is intuitive and seamless — and that it reflects your brand.</p>
+            <p class="service_text">Working in tandem with UI/UX teams, our devs rely on both mainstream and <a class="services_link" (click)="goTo('front-end-techn')">specialised technologies</a> to ensure that your app’s frontend is intuitive and seamless — and that it reflects your brand.</p>
         </div>
         <div class="service">
             <p class="service_tittle">Backend development</p>
@@ -44,35 +43,6 @@
         <div class="service">
             <p class="service_tittle">Modernisation and refinement</p>
             <p class="service_text">Our team can upgrade your legacy application to make it more efficient and resilient, freeing up valuable resources that can be redirected toward other revenue-generating activities.</p>
-        </div>
-    </div>
-</div>
-<div class="conpetentions">
-    <h2 class="competentions_tittle">Ours competemtions</h2>
-    <div class="competentions_list">
-        <div class="competent">
-            <h2 class="comp_tittle">Languages</h2>
-            <div class="comp_list">
-                <div class="comp">.NET</div>
-                <div class="comp">Node.js</div>
-                <div class="comp">JavaScript</div>
-            </div>
-        </div>
-        <div class="competent">
-            <h2 class="comp_tittle">Languages</h2>
-            <div class="comp_list">
-                <div class="comp">Django</div>
-                <div class="comp">Spring</div>
-                <div class="comp">ExpressJS</div>
-            </div>
-        </div>
-        <div class="competent">
-            <h2 class="comp_tittle">Databases</h2>
-            <div class="comp_list">
-                <div class="comp">MySQL</div>
-                <div class="comp">Oracle</div>
-                <div class="comp">MS SQL</div>
-            </div>
         </div>
     </div>
 </div>
