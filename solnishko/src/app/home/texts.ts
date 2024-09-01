@@ -23,7 +23,8 @@ export const advantages_array: advantages[] = [
       link: 'assets/contract.jpg',
       classes: ['purple'],
       active: false,
-      link_text: 'Our contract'
+      link_text: 'Our contract',
+      web_page: 'getIntouch'
     },
     {
       name: '24/7 support',

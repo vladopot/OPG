@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { advantages_array } from './texts';
 import { SwipeDirective } from '../directives/swipe.directive';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -16,9 +17,14 @@ import { SwipeDirective } from '../directives/swipe.directive';
 export class HomeComponent {
   public advantages = advantages_array;
   public position = 0;
+  public coordinat = {
+    'transform': `translateX(-${this.position*(100 / this.advantages.length)}%)`
+  };
   private isChanging = false;
 
   constructor() {}
+
+  router = inject(Router);
 
   changeCard(event: MouseEvent) {
     if (!this.isChanging) {
@@ -32,7 +38,14 @@ export class HomeComponent {
           this.advantages[this.position].active = true;
           this.isChanging = false;
         }
+        this.updateStyle();
       }
+    }
+  }
+
+  updateStyle() {
+    this.coordinat = {
+      'transform': `translateX(-${this.position*(100 / this.advantages.length)}%)`
     }
   }
 
@@ -45,6 +58,13 @@ export class HomeComponent {
       currentAdvantage.active = false;
       this.position = page;
       this.advantages[this.position].active = true;
+    }
+    this.updateStyle();
+  }
+
+  goToWeb(url = this.advantages[this.position].web_page) {
+    if (url) {
+      this.router.navigateByUrl(url);
     }
   }
 

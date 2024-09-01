@@ -32,4 +32,9 @@ export class HeaderComponent {
   showHideField() {
     this.hideField = !this.hideField;
   }
+
+  goToInTouch() {
+    this.router.navigateByUrl('getIntouch');
+    this.showBurger();
+  }
 }

@@ -12,10 +12,16 @@
           <div class="control_button" [ngClass]="{'active': advantages[3].active, 'non_active': !advantages[3].active}" (click)="changeCard($event)">04</div>
         </div>
         <div class="image_container">
-          <img appSwipe (swipeLeft)="changeCardSwipe(position+1)" (swipeRight)="changeCardSwipe(position-1)" class="advantage_img" src="{{ advantages[position].link }}" alt="">
-          <button [ngClass]="getClasses()" class="article_button">
-            <div class="arrow"></div>
-            {{ advantages[position].link_text }}
+          <div class="images" [ngStyle]="coordinat">
+            @for (item of advantages; track $index) {
+              <img class="advantage_img" appSwipe (swipeLeft)="changeCardSwipe(position+1)" (swipeRight)="changeCardSwipe(position-1)" src="{{ item.link }}" alt="">
+            }
+          </div>
+          <button class="article_button" [ngClass]="getClasses()" (click)="goToWeb()">
+            <div class="arrow">
+              <img class="arrow_img" src="./../../assets/arrow_right.png">
+            </div>
+            <p class="arrow_text">{{ advantages[position].link_text }}</p>
           </button>
           <div class="control_btns">
             <div class="left_btn" (click)="changeCardSwipe(this.position-1)">
@@ -27,37 +33,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="advantages_wrapper">
-        <div [ngClass]="getClasses()" class="advantages_cont advantages_tittle">
-          <h1 class="tittle_620px">{{ advantages[position].name }}</h1>
-        </div>
-        <div class="advantages_cont advantages_control_panel">
-          <div [ngClass]="{'active': advantages[0].active, 'non_active': !advantages[0].active}" class="control_btn_620px" (click)="changeCard($event)">01</div>
-          <div [ngClass]="{'active': advantages[1].active, 'non_active': !advantages[1].active}" class="control_btn_620px" (click)="changeCard($event)">02</div>
-          <div [ngClass]="{'active': advantages[2].active, 'non_active': !advantages[2].active}" class="control_btn_620px" (click)="changeCard($event)">03</div>
-          <div [ngClass]="{'active': advantages[3].active, 'non_active': !advantages[3].active}" class="control_btn_620px" (click)="changeCard($event)">04</div>
-          <p class="article_320px">{{ advantages[position].text }}</p>
-          <h1 class="tittle_320px">{{ advantages[position].name }}</h1>
-        </div>
-        <div class="advantages_cont article_wrapper" [ngClass]="{'hidden': !advantages[position].active, 'visible': advantages[position].active}">
-          <p class="article_620px">{{ advantages[position].text }}</p>
-          <button [ngClass]="getClasses()" class="article_button_620px">
-              {{ advantages[position].link_text }}
-          </button>
-        </div>
-        <div [ngClass]="{'hidden': !advantages[position].active, 'visible': advantages[position].active}" class="advantages_cont advantages_img">
-          <img appSwipe (swipeLeft)="changeCardSwipe(position+1)" (swipeRight)="changeCardSwipe(position-1)" class="advantage_img" [src]="advantages[position].link" [alt]="advantages[position].name">
-          <div class="control_panel_320px">
-            <div [ngClass]="{'active': advantages[0].active, 'non_active': !advantages[0].active}" class="control_btn_320px" (click)="changeCard($event)">01</div>
-            <div [ngClass]="{'active': advantages[1].active, 'non_active': !advantages[1].active}" class="control_btn_320px" (click)="changeCard($event)">02</div>
-            <div [ngClass]="{'active': advantages[2].active, 'non_active': !advantages[2].active}" class="control_btn_320px" (click)="changeCard($event)">03</div>
-            <div [ngClass]="{'active': advantages[3].active, 'non_active': !advantages[3].active}" class="control_btn_320px" (click)="changeCard($event)">04</div>
-          </div>
-          <button [ngClass]="getClasses()" class="article_button_320px">
-            {{ advantages[position].link_text }}
-          </button>
-        </div>
-      </div> -->
     </section>
     <section class="about_us_sect">
         <div class="text_ab_us">

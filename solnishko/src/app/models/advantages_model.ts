@@ -4,5 +4,6 @@ export interface advantages {
     link: string,
     classes: string[],
     active: boolean,
-    link_text: string
+    link_text: string,
+    web_page?: string
 }

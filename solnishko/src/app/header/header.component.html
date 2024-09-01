@@ -33,7 +33,7 @@
             <li class="nav_element pointer">Portfolio</li>
             <li class="nav_element pointer">Insights</li>
             <li class="nav_element pointer">About us</li>
-            <li class="nav_element contact_us">Contact us</li>
+            <li class="nav_element contact_us" (click)="goToInTouch()">Contact us</li>
         </ul>
     </nav>
     <section class="tablet_menu" [ngClass]= "{'show_Menu': showTabletMenu}">
@@ -76,7 +76,7 @@
                 </div>
             </li>
             <li class="nav_element contact_us">
-                <div class="nav_tittle_container">
+                <div (click)="goToInTouch()" class="nav_tittle_container">
                     <span class="nav_tittle">Contact us </span>
                 </div>
             </li>
